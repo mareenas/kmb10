@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+<input id='first-name' value='Mareena' class='first-name-input' />
+<input id='last-name' value='Savelieva' class='first-name-input' />
+<input id='adress' value='Slobodskaya str.' class='first-name-input' />
+<select name="city" id="city">
+    <option value="mw">Moskow</option>
+    <option value="mnsk" selected>Minsk</option>
+    <option value="ky">Kyev</option>
+</select><br>
+<textarea name="hobbies" id="hobbies" cols="30" rows="10">It's my hobbies.</textarea>
+<div id="picture">
+    <img src="https://i.ytimg.com/vi/mK72EwuxZAU/hqdefault.jpg" alt="kotic" id="kotik">
+</div>
+
+<script>
+    var firstNameEl = document.getElementById('first-name');
+
+    console.log(firstNameEl.value);
+    console.log(firstNameEl.className);
+
+    var lastName = document.getElementById('last-name');
+    console.log(lastName.value);
+
+    var adress = document.getElementById('adress');
+    console.log(adress.value);
+
+    var city = document.getElementById('city');
+    console.log(city.value);
+
+    var hobbies = document.getElementById('hobbies');
+    console.log(hobbies.value);
+    console.log(hobbies.innerHTML);
+
+    var picture = document.getElementById('picture');
+    console.log(picture.value);
+    console.log(picture.innerHTML);
+    console.log(city.innerHTML);
+
+    var picImg = document.getElementById('kotik');
+    console.log(picImg.src);
+    console.log(picImg.alt);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrapper {
+            background-color: lightblue;
+            width: 173px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .remember {
+            float: left;
+        }
+        .login {
+            float: right;
+        }
+        .row {
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="row">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email">
+        </div>
+        <div class="row">
+            <label for="pass">Password:</label><br>
+            <input type="password" id="pass">
+        </div>
+        <div class="row">
+            <div class="remember">
+                <input id="check" type="checkbox"><label for="check">remember me</label>
+            </div>
+            <div class="login">
+                <input type="button" value="Log In" id="confirm-button">
+            </div>
+        </div>
+    </div>
+<script>
+    var email = document.getElementById('email');
+    var pass = document.getElementById('pass');
+    var checkbox = document.getElementById('check');
+    var button = document.getElementById('confirm-button');
+    button.onclick = function() {
+        alert("Login: "+email.value+"; Pass: "+pass.value+"; Remember me: "+checkbox.checked);
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        .row {
+            padding-bottom: 10px;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 600px;
+            padding: 20px;
+            margin: 20px;
+            border: 2px solid grey;
+        }
+        #change-button {
+            width: 233px;
+            background-color: white;
+            border: 2px solid grey;
+            cursor: pointer;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <div class="wrapper">
+        <div class="left-div">
+            <div class="row">
+                <img src="http://masdearte.com/media/libros_primitivos.jpg" alt="avatar" class="avatar">
+            </div>
+            <div class="row">
+                <div class="identity">Sex</div>
+                <input type="radio" id="male" name="male">
+                <label for="male" class="iden1">M</label>
+                <input type="radio" id="female" name="female" checked>
+                <label for="female" class="iden2">F</label>
+            </div>
+            <div class="row">
+                <label for="single" class="is-single">Single</label>
+                <input type="checkbox" id="single" checked>
+            </div>
+        </div>
+        <div class="right-div">
+            <div class="row">
+                <div>
+                    <label for="first-name">First Name</label>
+                </div>
+                <input type="text" id="first-name" class="namefirst" value="Mareena">
+            </div>
+            <div class="row">
+                <div>
+                    <label for="last-name">Last Name</label>
+                </div>
+                <input type="text" id="last-name" class="namelast" value="Savelieva">
+            </div>
+            <div class="row">
+                <select name="city" id="city" class="hometown">
+                    <option value="brest">Brest</option>
+                    <option value="gomel">Gomel</option>
+                    <option value="grodno">Grodno</option>
+                    <option value="minsk" selected>Minsk</option>
+                    <option value="mogilev">Mogilev</option>
+                    <option value="vitebsk">Vitebsk</option>
+                </select>
+            </div>
+            <div class="row">
+                <div>
+                    <label for="aboutme">About me</label>
+                </div>
+                <textarea name="aboutme" id="aboutme" cols="30" rows="4" class="description">I am a good man.</textarea>
+            </div>
+            <input type="button" value="Change avatar back" id="change-button">
+        </div>
+    </div>
+</form>
+<script>
+    var firstname = document.getElementsByClassName('namefirst');
+    var lastname = document.getElementsByClassName('namelast');
+    var identity = document.getElementsByClassName('identity');
+    var iden1 = document.getElementsByClassName('iden1');
+    var iden2 = document.getElementsByClassName('iden2');
+    var singleStatus = document.getElementsByClassName('is-single');
+    var avatar = document.getElementsByClassName('avatar');
+    var hometown = document.getElementsByClassName('hometown');
+    var description = document.getElementsByClassName('description');
+
+    var button = document.getElementById("change-button");
+    setTimeout(function(){
+        firstname[0].value = "Mary";
+        lastname[0].value = "Very";
+        identity[0].innerHTML = "Gender";
+        iden1[0].innerHTML = "Male";
+        iden2[0].innerHTML = "Female";
+        singleStatus[0].innerHTML = "Taken";
+        avatar[0].src = "http://bp2.blogger.com/_2eWazr4uBa0/RqIbopY0hkI/AAAAAAAAAe8/Q_WOVu9sIus/s400/HalsPortrait_of_a_Woman.jpg";
+        hometown[0].value = "grodno";
+        description[0].innerHTML += "I want to find a job";
+    }, 4000);
+    button.addEventListener("click", function() {
+        avatar[0].src = "http://masdearte.com/media/libros_primitivos.jpg";
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 2</title>
+    <style>
+        .submit-btn {
+            background-color: wheat;
+            color: white;
+            border: 1px solid brown;
+            height: 30px;
+            width: 80px;
+            padding: 5px;
+            transform: rotate(45deg);
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <input value='Dmitry' class='first-name-input default-input' id='first-name' />
+    <input value='Kuzyuberdin' class='last-name-input default-input' id='last-name' />
+    <input value='Minsk city' class='address-input default-input' id='address' />
+
+    <select id='cities'>
+        <option>Kiev</option>
+        <option>Minsk</option>
+        <option selected>Moscow</option>
+    </select>
+
+    <textarea id='hobbies'>JS, CSS, HTML</textarea>
+
+    <div id='avatar-wrapper'>
+        <img id='avatar' src='https://pp.userapi.com/c631924/v631924026/44d7/AiFmeYaLmTc.jpg' alt='аватар' />
+    </div>
+
+    <button id='make-changes'>go</button>
+
+    <script>
+        var goButton = document.getElementById('make-changes');
+
+        var nameEl = document.getElementById('first-name');
+        var lastNameEl = document.getElementById('last-name');
+        var addressEl = document.getElementById('address');
+        var citiesEl = document.getElementById('cities');
+        var hobbiesEl = document.getElementById('hobbies');
+        var avatarWrapperEl = document.getElementById('avatar-wrapper');
+        var avatarEl = document.getElementById('avatar');
+
+        goButton.onclick = function() {
+            nameEl.value = 'Andrey';
+            lastNameEl.value = 'Andreev';
+            addressEl.value = 'Kazakhstan';
+            citiesEl.value = 'Minsk';
+            hobbiesEl.innerHTML = 'Кройка, шитье, оккультизм';
+            avatarEl.src = 'http://lamcdn.net/lookatme.ru/post-image/WuYl1gKpgBcLtyTTJLR6EA-thumbnail.png';
+            avatarWrapperEl.innerHTML += '<p>Это не <span style="font-weight: 900">див</span></p>';
+            goButton.className = 'submit-btn';
+        };
+
+    </script>
+</body>
+</html>
