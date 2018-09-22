@@ -10,11 +10,9 @@
             margin: 0 auto;
             padding: 20px;
         }
-        .remember {
-            float: left;
-        }
-        .login {
-            float: right;
+        .footer {
+            display: flex;
+            justify-content: space-around;
         }
         .row {
             padding-bottom: 10px;
@@ -31,20 +29,20 @@
             <label for="pass">Password:</label><br>
             <input type="password" id="pass">
         </div>
-        <div class="row">
-            <div class="remember">
+        <div class="row footer">
+            <div>
                 <input id="check" type="checkbox"><label for="check">remember me</label>
             </div>
-            <div class="login">
+            <div>
                 <input type="button" value="Log In" id="confirm-button">
             </div>
         </div>
     </div>
 <script>
-    var email = document.getElementById('email');
-    var pass = document.getElementById('pass');
-    var checkbox = document.getElementById('check');
-    var button = document.getElementById('confirm-button');
+    var email = document.querySelector('#email');
+    var pass = document.querySelector('#pass');
+    var checkbox = document.querySelector('#check');
+    var button = document.querySelector('#confirm-button');
     button.onclick = function() {
         alert("Login: "+email.value+"; Pass: "+pass.value+"; Remember me: "+checkbox.checked);
     };

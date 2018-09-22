@@ -36,15 +36,15 @@
     <button id='make-changes'>go</button>
 
     <script>
-        var goButton = document.getElementById('make-changes');
+        var goButton = document.querySelector('#make-changes');
 
-        var nameEl = document.getElementById('first-name');
-        var lastNameEl = document.getElementById('last-name');
-        var addressEl = document.getElementById('address');
-        var citiesEl = document.getElementById('cities');
-        var hobbiesEl = document.getElementById('hobbies');
-        var avatarWrapperEl = document.getElementById('avatar-wrapper');
-        var avatarEl = document.getElementById('avatar');
+        var nameEl = document.querySelector('#first-name');
+        var lastNameEl = document.querySelector('#last-name');
+        var addressEl = document.querySelector('#address');
+        var citiesEl = document.querySelector('#cities');
+        var hobbiesEl = document.querySelector('#hobbies');
+        var avatarWrapperEl = document.querySelector('#avatar-wrapper');
+        var avatarEl = document.querySelector('#avatar');
 
         goButton.onclick = function() {
             nameEl.value = 'Andrey';
@@ -56,7 +56,6 @@
             avatarWrapperEl.innerHTML += '<p>Это не <span style="font-weight: 900">див</span></p>';
             goButton.className = 'submit-btn';
         };
-
     </script>
 </body>
 </html>

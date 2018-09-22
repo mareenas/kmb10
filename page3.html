@@ -81,17 +81,17 @@
     </div>
 </form>
 <script>
-    var firstname = document.getElementsByClassName('namefirst');
-    var lastname = document.getElementsByClassName('namelast');
-    var identity = document.getElementsByClassName('identity');
-    var iden1 = document.getElementsByClassName('iden1');
-    var iden2 = document.getElementsByClassName('iden2');
-    var singleStatus = document.getElementsByClassName('is-single');
-    var avatar = document.getElementsByClassName('avatar');
-    var hometown = document.getElementsByClassName('hometown');
-    var description = document.getElementsByClassName('description');
+    var firstname = document.querySelectorAll('.namefirst');
+    var lastname = document.querySelectorAll('.namelast');
+    var identity = document.querySelectorAll('.identity');
+    var iden1 = document.querySelectorAll('.iden1');
+    var iden2 = document.querySelectorAll('.iden2');
+    var singleStatus = document.querySelectorAll('.is-single');
+    var avatar = document.querySelectorAll('.avatar');
+    var hometown = document.querySelectorAll('.hometown');
+    var description = document.querySelectorAll('.description');
 
-    var button = document.getElementById("change-button");
+    var button = document.querySelector("#change-button");
     setTimeout(function(){
         firstname[0].value = "Mary";
         lastname[0].value = "Very";
